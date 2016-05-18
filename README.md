@@ -5,7 +5,7 @@ Home: https://github.com/jcgregorio/httplib2
 
 Package license: MIT
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: A comprehensive HTTP client library
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/httplib2-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/httplib2-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/httplib2-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/httplib2-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/httplib2-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/httplib2-feedstock/branch/master)
