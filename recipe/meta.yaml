@@ -1,35 +1,35 @@
-{% set version = "0.9.2" %}
+{% set version = "0.10.3" %}
 
 package:
-    name: httplib2
-    version: {{ version }}
+  name: httplib2
+  version: {{ version }}
 
 source:
-    fn: httplib2-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/h/httplib2/httplib2-{{ version }}.tar.gz
-    md5: bd1b1445b3b2dfa7276b09b1a07b7f0e
+  fn: httplib2-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/h/httplib2/httplib2-{{ version }}.tar.gz
+  sha256: e404d3b7bd86c1bc931906098e7c1305d6a3a6dcef141b8bb1059903abb3ceeb
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
+  build:
+    - python
+    - setuptools
+  run:
+    - python
 
 test:
-    imports:
-        - httplib2
+  imports:
+    - httplib2
 
 about:
-    home: https://github.com/jcgregorio/httplib2
-    license: MIT
-    summary: A comprehensive HTTP client library
+  home: https://github.com/jcgregorio/httplib2
+  license: MIT
+  summary: 'A comprehensive HTTP client library'
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
-        - sigmavirus24
+  recipe-maintainers:
+    - ocefpaf
+    - sigmavirus24
