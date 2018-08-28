@@ -1,7 +1,7 @@
 About httplib2
 ==============
 
-Home: https://github.com/jcgregorio/httplib2
+Home: https://github.com/httplib2/httplib2
 
 Package license: MIT
 
