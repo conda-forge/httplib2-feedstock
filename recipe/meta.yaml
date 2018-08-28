@@ -5,18 +5,17 @@ package:
   version: {{ version }}
 
 source:
-  fn: httplib2-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/h/httplib2/httplib2-{{ version }}.tar.gz
   sha256: e71daed9a0e6373642db61166fa70beecc9bf04383477f84671348c02a04cbdf
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
   run:
     - python
 
@@ -25,8 +24,9 @@ test:
     - httplib2
 
 about:
-  home: https://github.com/jcgregorio/httplib2
+  home: https://github.com/httplib2/httplib2
   license: MIT
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
   summary: 'A comprehensive HTTP client library'
 
 extra:
