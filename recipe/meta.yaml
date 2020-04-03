@@ -1,4 +1,4 @@
-{% set version = "0.17.0" %}
+{% set version = "0.17.1" %}
 
 package:
   name: httplib2
@@ -6,11 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/h/httplib2/httplib2-{{ version }}.tar.gz
-  sha256: de96d0a49f46d0ee7e0aae80141d37b8fcd6a68fb05d02e0b82c128592dd8261
+  sha256: b81b2cd2248285168a4359f2acf24521a4099b5853e790309c45dcb90ee4b3c6
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -22,12 +23,16 @@ requirements:
 test:
   imports:
     - httplib2
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/httplib2/httplib2
   license: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
-  summary: 'A comprehensive HTTP client library'
+  license_file: LICENSE
+  summary: A comprehensive HTTP client library
 
 extra:
   recipe-maintainers:
