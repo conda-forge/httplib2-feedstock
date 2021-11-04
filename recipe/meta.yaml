@@ -22,7 +22,7 @@ requirements:
     - pytest
   run:
     - python >=3
-    - pyparsing >=2.4.2,<3
+    - pyparsing >=2.4.2,<4
 
 test:
   imports:
