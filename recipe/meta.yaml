@@ -1,5 +1,5 @@
 {% set name = "httplib2" %}
-{% set version = "0.20.4" %}
+{% set version = "0.21.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/httplib2-{{ version }}.tar.gz
-  sha256: 58a98e45b4b1a48273073f905d2961666ecf0fbac4250ea5b47aef259eb5c585
+  sha256: fc144f091c7286b82bec71bdbd9b27323ba709cc612568d3000893bfd9cb4b34
 
 build:
   number: 0
@@ -17,12 +17,12 @@ build:
 
 requirements:
   host:
-    - python >=3
+    - python >=3.6
     - pip
-    - pytest
+    - setuptools >=40.8.0
   run:
-    - python >=3
-    - pyparsing >=2.4.2,<4
+    - python >=3.6
+    - pyparsing >=2.4.2,<4,!=3.0.0,!=3.0.1,!=3.0.2,!=3.0.3
 
 test:
   imports:
