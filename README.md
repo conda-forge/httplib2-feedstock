@@ -1,11 +1,11 @@
-About httplib2
-==============
+About httplib2-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/httplib2-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/httplib2/httplib2
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/httplib2-feedstock/blob/main/LICENSE.txt)
 
 Summary: A comprehensive HTTP client library
 
