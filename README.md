@@ -7,7 +7,7 @@ Home: https://github.com/httplib2/httplib2
 
 Package license: MIT
 
-Summary: A comprehensive HTTP client library
+Summary: A comprehensive HTTP client library.
 
 Current build status
 ====================
