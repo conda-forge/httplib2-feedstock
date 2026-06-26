@@ -1,0 +1,46 @@
+schema_version: 1
+
+context:
+  version: "0.32.0"
+
+package:
+  name: httplib2
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/h/httplib2/httplib2-${{ version }}.tar.gz
+  sha256: 48a0ef30a42db65d8f3399045e1d09ab0ba66e3b9efc360d07f80ea55d286025
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=40.8.0
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - pyparsing >=3.1,<4
+
+tests:
+  - python:
+      imports:
+        - httplib2
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: A comprehensive HTTP client library.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/httplib2/httplib2
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
+    - sigmavirus24
