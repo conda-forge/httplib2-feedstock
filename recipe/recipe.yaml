@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.32.0"
+  version: "0.32.1"
 
 package:
   name: httplib2
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/h/httplib2/httplib2-${{ version }}.tar.gz
-  sha256: 48a0ef30a42db65d8f3399045e1d09ab0ba66e3b9efc360d07f80ea55d286025
+  sha256: 37900eb8a74576bd99fc39ae1dc8409f95f965d45b56cbcb2194bb55f58a90e1
 
 build:
   number: 0
