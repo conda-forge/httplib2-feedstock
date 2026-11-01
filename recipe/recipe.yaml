@@ -35,6 +35,17 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - "*"
+  - requirements:
+      run:
+        - pytest
+        - cryptography
+        - pysocks
+        # note: pytest-forked is not really required, and breaks stuff
+    files:
+      source:
+        - tests/
+    script:
+      - pytest -vv --ignore=tests/_TODO_legacy/
 
 about:
   summary: A comprehensive HTTP client library.
