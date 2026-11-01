@@ -12,7 +12,7 @@ source:
   sha256: 37900eb8a74576bd99fc39ae1dc8409f95f965d45b56cbcb2194bb55f58a90e1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -23,6 +23,8 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
+    # certifi dep is optional, but avoids using bundled certificate store
+    - certifi
     - pyparsing >=3.1,<4
 
 tests:
